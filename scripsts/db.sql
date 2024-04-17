@@ -1,0 +1,19 @@
+create database animeresena;
+CREATE TABLE IF NOT EXISTS animeresena.animes(
+ID_ANIMES int not null,
+TITULO VARCHAR(50),
+DIRECTOR VARCHAR(25),
+GENERO CHAR(15),
+DURACION CHAR(5),
+SINOPSIS VARCHAR(100),
+primary key(ID_ANIMES)
+);
+CREATE TABLE IF NOT EXISTS animeresena.Usuarios(
+NombreUsuario VARCHAR(50) not null,
+TITULO VARCHAR(50),
+DIRECTOR VARCHAR(25),
+GENERO CHAR(15),
+DURACION CHAR(5),
+SINOPSIS VARCHAR(100),
+primary key(ID_ANIMES)
+);
