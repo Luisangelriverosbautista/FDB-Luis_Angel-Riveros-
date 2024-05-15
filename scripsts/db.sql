@@ -76,3 +76,17 @@ INSERT INTO Calificaciones (ID_USUARIO, ID_ANIMES, VALOR) VALUES
 ('user002', 4, '6/10'),
 ('user003', 1, '9/10'),
 ('user004', 2, '8/10');
+SELECT * FROM Animes;
+SELECT * FROM Usuarios;
+SELECT * FROM Resenas;
+SELECT * FROM Calificaciones;
+SELECT r.ID_RESENAS, u.NombreUsuario, a.TITULO, r.TEXTO, r.FECHA
+FROM Resenas r
+JOIN Usuarios u ON r.ID_USUARIO = u.ID_USUARIO
+JOIN Animes a ON r.ID_ANIMES = a.ID_ANIMES
+WHERE a.TITULO = 'Death Note';
+SELECT c.ID_CALIFICACIONES, u.NombreUsuario, a.TITULO, c.VALOR
+FROM Calificaciones c
+JOIN Usuarios u ON c.ID_USUARIO = u.ID_USUARIO
+JOIN Animes a ON c.ID_ANIMES = a.ID_ANIMES
+WHERE a.TITULO = 'My Hero Academia';
